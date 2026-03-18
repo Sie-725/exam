@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "name": "exam-helper",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo \"no build - content.js loaded directly\""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

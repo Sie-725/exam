@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Exam Helper",
+  "version": "1.0",
+  "description": "划词搜索本地题库并显示答案",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "search-question": {
+      "suggested_key": {
+        "default": "Ctrl+Q"
+      },
+      "description": "搜索选中题目"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["questions.json"],
+    "matches": ["<all_urls>"]
+  }]
+}
