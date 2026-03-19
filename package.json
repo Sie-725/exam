@@ -5,6 +5,7 @@
   "scripts": {
     "build": "echo \"no build - content.js loaded directly\""
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
 }
